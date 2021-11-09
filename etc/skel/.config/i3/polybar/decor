@@ -1,0 +1,53 @@
+[module/spacing]
+type = custom/text
+content = " "
+content-background = ${color.background}
+
+[module/sep]
+type = custom/text
+content = -
+
+content-background = ${color.background}
+content-foreground = ${color.background}
+
+[module/dot]
+type = custom/text
+;content = 
+content = ""
+
+content-font = 3
+content-background = ${color.background}
+content-foreground = ${color.altblack}
+content-padding = 2
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.altblack}
+
+[module/RD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-background = ${color.background}
+content-foreground = ${color.altblack}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
+
+[module/LLD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 3
+content-background = ${color.background}
+content-foreground = ${color.blue}
+
+[module/RRD]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 3
+content-background = ${color.background}
+content-foreground = ${color.blue}
+
+;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_

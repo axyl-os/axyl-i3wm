@@ -1,0 +1,3 @@
+#!/bin/sh
+
+feh --no-fehbg --bg-scale "$HOME/.config/i3/wallpaper.jpg"
