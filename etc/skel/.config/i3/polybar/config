@@ -50,9 +50,9 @@ font-2 = "Iosevka Nerd Font:size=16;4"
 font-3 = "Iosevka Nerd Font:size=18;4"
 
 # Default
-modules-left = LLD launcher RRD dot LD cpu RD spacing LD memory RD spacing LD filesystem RD dot LD network RD
+modules-left = spacing BLD launcher BRD dot GLD cpu GRD spacing YLD memory YRD spacing CLD filesystem CRD dot MLD network MRD
 modules-center = LD i3 RD
-modules-right =  LD battery RD dot LD volume backlight RD dot LD time RD spacing
+modules-right =  RLD battery RRD dot GLD volume PL backlight YRD dot BLD time BRD spacing
 
 spacing = 0
 dim-value = 1.0
