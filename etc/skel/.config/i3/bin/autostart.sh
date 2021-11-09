@@ -12,7 +12,10 @@ $HOME/.config/i3/bin/i3bar.sh
 xsetroot -cursor_name left_ptr
 
 # kill if already running
-killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd
+killall -9 picom xfce4-power-manager ksuperkey dunst sxhkd conky
+
+# Launch Conky
+conky -c $HOME/.config/conky/axyl.conkyrc
 
 # sets superkey
 ksuperkey -e 'Super_L=Alt_L|F1' &
@@ -44,3 +47,7 @@ udiskie &
 
 # replace neovim colorscheme
 sed -i "s/theme =.*$/theme = \"everforest\",/g" $HOME/.config/nvim/lua/chadrc.lua
+
+## Welcome-App-Run-Once
+axyl-welcome &
+sed -i -e '/## Welcome-App-Run-Once/Q' "$HOME"/.config/i3/bin/autostart.sh
