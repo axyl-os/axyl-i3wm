@@ -6,7 +6,7 @@ source colors
 bash $HOME/.config/i3/.fehbg
 
 # polybar
-$HOME/.config/i3/bin/i3bar.sh
+$HOME/.config/i3/bin/launchbar.sh
 
 # Fix cursor
 xsetroot -cursor_name left_ptr
@@ -50,4 +50,5 @@ sed -i "s/theme =.*$/theme = \"everforest\",/g" $HOME/.config/nvim/lua/chadrc.lu
 
 ## Welcome-App-Run-Once
 axyl-welcome &
-sed -i -e '/## Welcome-App-Run-Once/Q' "$HOME"/.config/i3/bin/autostart.sh
+sed -i -e '/## Welcome-App-Run-Once/Q' "$HOME/.config/i3/bin/autostart.sh"
+sed -i -e '/##~~~ Floating Calamares/Q' "$HOME/.config/i3/config"

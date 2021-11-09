@@ -8,31 +8,31 @@ MFILE="$DIR/.module"
 
 ## Get system variable values for various modules
 get_values() {
-	CARD=$(ls /sys/class/backlight | head -n 1)
-	BATTERY=$(ls /sys/class/power_supply | grep BAT | head -n 1)
-	ADAPTER=$(ls /sys/class/power_supply | grep AC | head -n 1)
+	CARD=$(find /sys/class/backlight | head -n 1)
+	BATTERY=$(find /sys/class/power_supply/*BAT* | head -n 1)
+	ADAPTER=$(find /sys/class/power_supply/*AC* | head -n 1)
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
 }
 
 ## Write values to `system` file
 set_values() {
 	if [[ "$ADAPTER" ]]; then
-		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" 						${SFILE}
+		sed -i -e "s/adapter = .*/adapter = $ADAPTER/g" "$SFILE"
 	fi
 	if [[ "$BATTERY" ]]; then
-		sed -i -e "s/battery = .*/battery = $BATTERY/g" 						${SFILE}
+		sed -i -e "s/battery = .*/battery = $BATTERY/g" "$SFILE"
 	fi
 	if [[ "$CARD" ]]; then
-		sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" 				${SFILE}
+		sed -i -e "s/graphics_card = .*/graphics_card = $CARD/g" "$SFILE"
 	fi
 	if [[ "$INTERFACE" ]]; then
-		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" 	${SFILE}
+		sed -i -e "s/network_interface = .*/network_interface = $INTERFACE/g" "$SFILE"
 	fi
 }
 
 ## Launch Polybar with selected style
 launch_bar() {
-	CARD=$(ls /sys/class/backlight | head -n 1)
+	CARD=$(find /sys/class/backlight | head -n 1)
 	if [[ "$CARD" != *"intel_"* ]]; then
 		if [[ ! -f "$MFILE" ]]; then
 			sed -i -e 's/backlight/brightness/g' "$DIR"/config
@@ -40,7 +40,7 @@ launch_bar() {
 		fi
 	fi
 		
-	if [[ ! `pidof polybar` ]]; then
+	if [[ ! $(pidof polybar) ]]; then
 		polybar -q main -c "$DIR"/config &
 	else
 		polybar-msg cmd restart
@@ -51,6 +51,7 @@ launch_bar() {
 if [[ ! -f "$RFILE" ]]; then
 	get_values
 	set_values
-	touch ${RFILE}
+	touch "$RFILE"
 fi
+
 launch_bar

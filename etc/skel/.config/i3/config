@@ -187,3 +187,8 @@ for_window [class="feh|Viewnior|MPlayer"] floating enable
 ##
 
 exec_always --no-startup-id "~/.config/i3/bin/autostart.sh"
+
+##~~~ Floating Calamares ~~~~~~~~~~~~~~~~~~~
+#
+
+for_window [class="calamares"] floating enable
