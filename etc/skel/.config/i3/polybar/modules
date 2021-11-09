@@ -294,7 +294,7 @@ format-disconnected-prefix-font = 2
 format-disconnected-foreground = ${color.background}
 format-disconnected-background = ${color.magenta}
 
-label-connected = "%{A1:def-nmdmenu &:}My Privates%{A}"
+label-connected = "%{A1:def-nmdmenu &:}%essid%%{A}"
 label-disconnected = "%{A1:def-nmdmenu &:}Offline%{A}"
 
 label-connected-foreground = ${color.background}
