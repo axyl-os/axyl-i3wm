@@ -261,7 +261,7 @@ format-unmounted-prefix = ""
 format-unmounted-prefix-foreground = ${color.background}
 format-unmounted-prefix-background = ${color.cyan}
 
-label-mounted = "%{A1:terminal -e ncdu &:} %free% %{A}"
+label-mounted = "%{A1:terminal -e ncdu &:} %free%%{A}"
 label-unmounted = " %mountpoint%: NA"
 label-mounted-foreground = ${color.background}
 
