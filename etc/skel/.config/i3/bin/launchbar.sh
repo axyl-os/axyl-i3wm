@@ -8,9 +8,9 @@ MFILE="$DIR/.module"
 
 ## Get system variable values for various modules
 get_values() {
-	CARD=$(find /sys/class/backlight | head -n 1)
-	BATTERY=$(find /sys/class/power_supply/*BAT* | head -n 1)
-	ADAPTER=$(find /sys/class/power_supply/*AC* | head -n 1)
+	CARD=$(basename "$(find /sys/class/backlight/* | head -n 1)")
+	BATTERY=$(basename "$(find /sys/class/power_supply/*BAT* | head -n 1)")
+	ADAPTER=$( "$(find /sys/class/power_supply/*AC* | head -n 1)")
 	INTERFACE=$(ip link | awk '/state UP/ {print $2}' | tr -d :)
 }
 
@@ -32,7 +32,7 @@ set_values() {
 
 ## Launch Polybar with selected style
 launch_bar() {
-	CARD=$(find /sys/class/backlight | head -n 1)
+	CARD=$(basename "$(find /sys/class/backlight/* | head -n 1)")
 	if [[ "$CARD" != *"intel_"* ]]; then
 		if [[ ! -f "$MFILE" ]]; then
 			sed -i -e 's/backlight/brightness/g' "$DIR"/config
