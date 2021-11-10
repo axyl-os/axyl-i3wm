@@ -84,7 +84,7 @@ label-volume-foreground = ${color.background}
 label-muted-foreground = ${color.background}
 
 ramp-volume-0 = " "
-ramp-volume-1 = ""
+ramp-volume-1 = " "
 ramp-volume-2 = " "
 ramp-volume-3 = " "
 ramp-volume-4 = " "
@@ -207,10 +207,10 @@ label-unfocused-padding = 1
 label-visible-padding = 1
 label-urgent-padding = 1
 
-label-separator = |
-label-separator-padding = 0
-label-separator-foreground = ${color.foreground}
-label-separator-background = ${color.altblack}
+;label-separator = |
+;label-separator-padding = 0
+;label-separator-foreground = ${color.foreground}
+;label-separator-background = ${color.altblack}
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -222,7 +222,7 @@ format-padding = 0
 format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.green}
-label = %percentage%%
+label = "%{A1:terminal -e gtop &:}%percentage%% %{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
@@ -261,7 +261,7 @@ format-unmounted-prefix = ""
 format-unmounted-prefix-foreground = ${color.background}
 format-unmounted-prefix-background = ${color.cyan}
 
-label-mounted = " %free%"
+label-mounted = "%{A1:terminal -e ncdu &:} %free% %{A}"
 label-unmounted = " %mountpoint%: NA"
 label-mounted-foreground = ${color.background}
 
@@ -281,7 +281,7 @@ format-prefix-foreground = ${color.background}
 format-foreground = ${color.background}
 format-background = ${color.yellow}
 
-label = " %mb_used%"
+label = "%{A1:terminal -e htop &:} %mb_used% %{A}"
 
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
 
