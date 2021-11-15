@@ -38,11 +38,11 @@ gaps outer 0
 client.background       #2b3339
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #7fbbb3 #7fbbb3 #d3c6aa #a7c080   #7fbbb3
-client.focused_inactive #61AFEF #61AFEF #2b3339 #a7c080   #61AFEF
-client.unfocused        #4b565c #4b565c #d3c6aa #a7c080   #4b565c
-client.urgent           #e67e80 #e67e80 #d3c6aa #a7c080   #e67e80
-client.placeholder      #2b3339 #2b3339 #d3c6aa #a7c080   #2b3339
+client.focused          #81A1C1 #81A1C1 #D8DEE9 #a7c080   #81A1C1
+client.focused_inactive #61AFEF #61AFEF #2E3440 #a7c080   #61AFEF
+client.unfocused        #3B4252 #3B4252 #D8DEE9 #a7c080   #3B4252
+client.urgent           #BF616A #BF616A #D8DEE9 #a7c080   #BF616A
+client.placeholder      #2E3440 #2E3440 #D8DEE9 #a7c080   #2E3440
 
 
 ##~~~ Keybindings ~~~~~~~~~~~~~~~~~~~~~~
@@ -179,7 +179,8 @@ assign [class="VirtualBox Manager"] 7
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
-for_window [class="Alafloat"] floating enable
+for_window [class="zoom"] floating enable
+for_window [class="Alafloat|Matplotlib"] floating enable
 for_window [class="Onboard|Yad"] floating enable
 for_window [class="feh|Viewnior|MPlayer"] floating enable
 
