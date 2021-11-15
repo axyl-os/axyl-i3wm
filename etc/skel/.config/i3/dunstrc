@@ -166,21 +166,21 @@ context = ctrl+shift+period
 [urgency_low]
 # IMPORTANT: colors have to be defined in quotation marks.
 # Otherwise the "#" and following would be interpreted as a comment.
-frame_color = "#7fbbb3"
-foreground = "#7fbbb3"
-background = "#2b3339"
+frame_color = "#81A1C1"
+foreground = "#81A1C1"
+background = "#2E3440"
 timeout = 5
 
 [urgency_normal]
-frame_color = "#4b565c"
-foreground = "#d3c6aa"
-background = "#2b3339"
+frame_color = "#4C566A"
+foreground = "#D8DEE9"
+background = "#2E3440"
 timeout = 5
 
 [urgency_critical]
-frame_color = "#e67e80"
-foreground = "#e67e80"
-background = "#2b3339"
+frame_color = "#BF616A"
+foreground = "#BF616A"
+background = "#2E3440"
 timeout = 5
 
 
