@@ -166,4 +166,11 @@ content-font = 3
 content-background = ${color.yellow}
 content-foreground = ${color.cyan}
 
+[module/RPL]
+type = custom/text
+content = "%{T3}%{T-}"
+content-font = 3
+content-background = ${color.magenta}
+content-foreground = ${color.red}
+
 ;; _-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_
