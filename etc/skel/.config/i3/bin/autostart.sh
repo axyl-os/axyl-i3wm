@@ -47,6 +47,10 @@ sed -i "s/theme =.*$/theme = \"nord\",/g" $HOME/.config/nvim/lua/custom/chadrc.l
 XFCE_TERM_PATH="$HOME/.config/xfce4/terminal"
 cp "$XFCE_TERM_PATH"/colorschemes/nord "$XFCE_TERM_PATH"/terminalrc
 
+# change cava colorscheme
+CAVA_PATH="$HOME/.config/cava"
+cp "$CAVA_PATH"/colorschemes/nord "$CAVA_PATH"/config
+
 ## Welcome-App-Run-Once
 axyl-welcome &
 sed -i -e '/## Welcome-App-Run-Once/Q' "$HOME/.config/i3/bin/autostart.sh"
