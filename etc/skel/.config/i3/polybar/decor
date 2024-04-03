@@ -30,7 +30,7 @@ content-foreground = ${color.altblack}
 
 [module/RD]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{O-1}%{T-}"
 content-background = ${color.background}
 content-foreground = ${color.altblack}
 
@@ -45,7 +45,7 @@ content-foreground = ${color.red}
 
 [module/RRD]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{O-1}%{T-}"
 content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.red}
@@ -61,7 +61,7 @@ content-foreground = ${color.white}
 
 [module/WRD]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{O-1}%{T-}"
 content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.white}
@@ -78,7 +78,7 @@ content-foreground = ${color.cyan}
 
 [module/CRD]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{O-1}%{T-}"
 content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.cyan}
@@ -95,7 +95,7 @@ content-foreground = ${color.magenta}
 
 [module/MRD]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{O-1}%{T-}"
 content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.magenta}
@@ -112,7 +112,7 @@ content-foreground = ${color.yellow}
 
 [module/YRD]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{O-1}%{T-}"
 content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.yellow}
@@ -129,7 +129,7 @@ content-foreground = ${color.green}
 
 [module/GRD]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{O-1}%{T-}"
 content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.green}
@@ -145,7 +145,7 @@ content-foreground = ${color.blue}
 
 [module/BRD]
 type = custom/text
-content = "%{T3}%{T-}"
+content = "%{T3}%{O-1}%{T-}"
 content-font = 3
 content-background = ${color.background}
 content-foreground = ${color.blue}
